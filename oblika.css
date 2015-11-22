@@ -38,7 +38,7 @@ input:checked {
 }
 
 a:link { 
-   color: #5755F5;
+   color: #003300;
    text-decoration: none;
 }
 a:visited {
@@ -46,7 +46,7 @@ a:visited {
    text-decoration: none;
 }
 a:hover {
-   color: #F94E51;
+   color: #006600;
    text-decoration: none;
    background-color: white;
 }
@@ -152,7 +152,7 @@ a:active {
   	background: -moz-linear-gradient(#FFFFFF, #3399FF); /* For Firefox 3.6 to 15 */
   	background: linear-gradient(#FFFFFF, #3399FF); /* Standard syntax */
 }
-
+/*
 .calendar-box {
 	display:none;
 	background-color:#fff;
@@ -170,6 +170,7 @@ a:active {
 .calendar-box .calendar-cancel {
 	width:100%;
 }
+
 .calendar-box table td {
 	width:14%;
 }
@@ -188,4 +189,4 @@ a:active {
 	padding:0 5px;
 	margin-left:-5px;
 	background-color:#c9ff8b;
-}
+}*/
