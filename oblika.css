@@ -76,7 +76,7 @@ a:active {
 	margin-left: auto;
     margin-right: auto;
 	position: absolute;
-    top: 20%;
+    top: 30%;
     left: 30%;
     right: 30%;
     bottom: 20%;
@@ -87,7 +87,7 @@ a:active {
 }
 
 .ocena{
-	width: 100%;
+	width: 95%;
 	background-color: lightgreen;
 	padding-left: 5%;
 	padding-top: 5%;
@@ -104,9 +104,7 @@ a:active {
 	padding: 0 1% 0 1%;
 	margin: 0;
 }
-.linki:hover{
-	border: 2px solid white;
-}
+
 .plus{
 	height:100%;
 	width:100%;
@@ -124,7 +122,7 @@ a:active {
 #logo{
 	float: left;
 	height: 100px;
-	width: 150 px;
+	
 	display: inline-block;
 }
 #sola{
@@ -143,7 +141,6 @@ a:active {
 #meni{
 	/*float: left;*/
 	width: 100%;
-	padding: 2%px;
 	text-align: center;
 	background-color: #00CCFF;
 	/*border-style: ridge;*/

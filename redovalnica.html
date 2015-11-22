@@ -1,0 +1,64 @@
+<?xml version = "1.0" encoding = "utf-8" ?>
+<!DOCTYPE html 
+    PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=windows-1250" />
+		<link rel="stylesheet" type="text/css" href="oblika.css" />
+		<title>login</title>
+        <script type="text/javascript">
+			function testmail() {
+				var x = document.forms["login"]["usermail"].value;
+				var pas = document.forms["login"]["password"].value;
+				var mail = new RegExp("^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$");
+				var pos = x.search(mail);
+				if(!pas){
+					alert("Vpiši geslo");
+				}else{
+					if(pos < 0){
+						alert("Napačen uporabnik (email naslov)");
+					}else {
+						window.location = "./ucitelj-redovalnica.html";
+					}
+				}
+			}
+        </script>
+	</head>
+	<body>
+    	<div id="header">
+			<div id="logo">
+				<img src="./logo.jpg" alt="logo ?ole" height="100px" />
+			</div>
+			<div id="sola">
+				<p>
+				Srednja lego sola za zidarje
+                </p><p>
+				Legoland 420, 0000 Paradise
+                </p>
+			</div>
+			
+		</div>
+		<div class="vpis">
+			<form name="login" action="./ucitelj-redovalnica.html" method="post" accept-charset="utf-8" class="okvir">  
+    			<ul>  
+        			<li><label for="usermail">Email</label>  
+        				<input type="text" name="usermail" placeholder="ime@email.com" required="required"/>
+                        <!--<script type="text/javascript">
+							var vnos = document.getElementById("usermail");
+							vnos.addEventListener("change",testmail,false);
+								
+						</script>-->
+                    </li> 
+                        </br> 
+        			<li><label for="password">Geslo</label>  
+        				<input type="password" name="password" placeholder="geslo" required="required"/></li>
+                        </br>   
+        			<li>  
+        			<input type="button" value="Vpis" onclick="testmail()"/></li>  
+    			</ul>  
+			</form> 
+		</div>
+	</body>
+</html>

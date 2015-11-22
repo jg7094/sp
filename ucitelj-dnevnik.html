@@ -1,4 +1,4 @@
-<?xml version = "1.0" encoding = "utf-8" ?>
+
 <!DOCTYPE html 
     PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
     "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
@@ -6,9 +6,22 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 	<head>
 		<link rel="stylesheet" type="text/css" href="oblika.css" />
-		<meta http-equiv="Content-Type" content="text/html; charset=windows-1250" />
-		<title>Učitelj-dnevnik</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<title>Ucitelj-dnevnik</title>
         <!--<script src="koledar.js"></script>-->
+        <script type="text/javascript">
+			function testDatum(){
+				var x = document.forms["ucnaUra"]["datum"].value;
+				var oblika = new RegExp("^(\d{1,2})[\-\s:\/]+(\d{1,2})[\-\s:\/]+(\d{4})$");
+				/*"^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$"*/
+				var pos = x.search(oblika);
+				if(pos < 0){
+					/*window.location = "./ucitelj-redovalnica.html";*/
+				}else {
+					alert("Napačen datum");
+				}
+			}
+		</script>
 	</head>
 	<body onload="trenutniDatum();">
 		<div id="header">
@@ -16,16 +29,18 @@
 				<img src="./logo.jpg" alt="logo ?ole" height="100px" />
 			</div>
 			<div id="sola">
-				</br>
-				Srednja lego šola za zidarje
-			  </br>
+				<p>
+				Srednja lego sola za zidarje
+                </p><p>
 				Legoland 420, 0000 Paradise
+                </p>
 			</div>
 			<div id="uporabnik">
-				</br>
+				<p>
 				user: master 
-				</br>
+				</p><p>
 				prof. Ole Kirk Christiansen 
+                </p>
 			</div>
 		</div>
 		<div id="meni">  
@@ -33,23 +48,23 @@
                 <a href="./ucitelj-redovalnica.html"><span class="linki">Redovalnica</span></a>    
 		</div>
 		<div class="vsebina">
-			<form>
-				<p><label>Letnik:&nbsp 
+			<form name="ucnaUra" action="">
+				<p><label>Letnik: 
 					<select name="letnik"> 
 						<option value="prvi">1.</option>
 						<option value="drugi" selected="selected">2.</option>
 						<option value="tretji">3.</option>
 					</select>
 				</label></p>
-				<p><label>Predmet:&nbsp 
+				<p><label>Predmet:
 					<select name="predmet"> 
 						<option value="SP" selected="selected">Spletno programiranje</option>
 						<option value="PRPO">principi razvoja programske opreme</option>
 						<option value="OS">operacijski sistemi</option>
 					</select>
 				</label></p>
-				<p><label>Datum:&nbsp 
-					<input id="datum" type="date" required/>
+				<p><label for="datum">Datum: 
+					<input id="datum" type="date" required="required"/>
                     <!--<script type="text/javascript">
 						calendar.set("datum");
   					</script>
@@ -57,24 +72,24 @@
   						document.getElementById('datum').value = Date();
 					</script>-->
 				</label></p>
-				</br>
+				<p></p>
 				<p><label>Snov:
-					<input type="text" name="snov" required/>
+					<input type="text" name="snov" required="required"/>
 				</label></p>
-				<p><label>Opis:</br>
+				<p><label>Opis:
 					<textarea name="opis" rows="5" cols="42" placeholder="Opis predelane snovi..."></textarea>
 				</label></p>
-				</br>
-				<p><label>Odsotni u?enci: </br>
-					</br><input type="checkbox" name="ucenec" value="ime1" checked="checked"/>Jaka Govc
-					</br><input type="checkbox" name="ucenec" value="ime2"/>J G
-					</br><input type="checkbox" name="ucenec" value="ime3"/>Janez Novak :)
-					</br><input type="checkbox" name="ucenec" value="ime4"/>Metka Novak :P
-					</br>
+				<p> </p>
+				<p><label>Odsotni ucenci:
+					<p><input type="checkbox" name="ucenec" value="ime1" checked="checked"/>Jaka Govc</p>
+					<p><input type="checkbox" name="ucenec" value="ime2"/>J G</p>
+					<p><input type="checkbox" name="ucenec" value="ime3"/>Janez Novak :)</p>
+					<p><input type="checkbox" name="ucenec" value="ime4"/>Metka Novak :P</p>
+					<p></p>
 				</label></p>
-				<input type = "submit" value = "Kon?aj uro">
+				<input type = "submit" onclick="testDatum()" value = "Koncaj uro">
 			</form>
-			</br>
+			<p></p>
 		</div>
 		
 	</body>

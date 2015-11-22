@@ -5,31 +5,31 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 	<head>
-		<meta http-equiv="Content-Type" content="text/html; charset=windows-1250" />
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 		<link rel="stylesheet" type="text/css" href="oblika.css" />
 		<title>ocena</title>
 	</head>
 	<body>
 		<div class="ocena">
-			<form>
-				<p>UČENEC: Jaka Govc</p>
+			<form action="self.close();">
+				<p>UCENEC: Jaka Govc</p>
 				<p>LETNIK: 3.</p>
 				<p>PREDMET: Spletno programiranje</p>
-				</br>
-				<p><label>Semester:&nbsp 
+				<p></p>
+				<p><label>Semester: 
 					<select name="semester"> 
 						<option value="prvi">1.</option>
 						<option value="drugi">2.</option>
 					</select>
 				</label></p>
-				<p><label>Tip:&nbsp 
+				<p><label>Tip: 
 					<select name="tipocene"> 
 						<option value="ustno">Ustno</option>
 						<option value="pisno">Pisno</option>
 						<option value="vaje">Vaje</option>
 					</select>
 				</label></p>
-				<p><label>Ocena:&nbsp 
+				<p><label>Ocena:
 					<select name="ocena"> 
 						<option value="ena">1</option>
 						<option value="dva">2</option>
@@ -38,15 +38,19 @@
 						<option value="pet">5</option>
 					</select>
 				</label></p>
-				</br>
-				<p><label>Komentar:</br>
+				<p></p>
+                <p>Komentar:</p>
+				<div><p><label>
 					<textarea name="komentar" rows="5" cols="42"></textarea>
-				</label></p>
-				</br>
-				<input type="submit" value="Dodaj oceno">
-				<input type=button onClick="self.close();" value="Zapri">
-				</br>
-				</br>
+				</label></p><p></p>
+                </div>
+				<p>
+				<input type="submit" value="Dodaj oceno"/>
+                <input type="reset"  value="Zapri"/>
+				<!--<input type="button" onClick="self.close();" value="Zapri"/>-->
+				</p>
+				<p> </p>
+
 			</form>
 		</div>
 	</body>

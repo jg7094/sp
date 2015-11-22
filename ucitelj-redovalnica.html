@@ -7,31 +7,47 @@
 	<head>
 		<link rel="stylesheet" type="text/css" href="oblika.css" />
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-		<meta http-equiv="Content-Type" content="text/html; charset=windows-1250" />
 		<title>Učitelj-redovalnica</title>
-        <script>
-      		function dodajOsebo(imepriimek, predmet, ocene, povprecna, koncna, izostanek) {
-         		document.getElementById().innerHTML = "Odstavek je bil spremenjen.";
+        <script type="text/javascript">
+      		function dodajOsebo() {
+         		// Find a <table> element with id="myTable":
+				var table = document.getElementById("tejbl");
+				var oseba = document.forms["tab"]["imepriimek"].value;
+// Create an empty <tr> element and add it to the 1st position of the table:
+				var row = table.insertRow(1);
+
+// Insert new cells (<td> elements) at the 1st and 2nd position of the "new" <tr> element:
+				var cell1 = row.insertCell(0);
+				var cell2 = row.insertCell(1);
+				var cell2 = row.insertCell(2);
+				var cell2 = row.insertCell(3);
+				var cell2 = row.insertCell(4);
+				var cell2 = row.insertCell(5);
+
+// Add some text to the new cells:
+				cell1.innerHTML = oseba;
+				cell4.innerHTML = "+ (brez linka)";
       		}
 		</script>
 	</head>
 	<body>
 		<div id="header">
 			<div id="logo">
-				<img src="./logo.jpg" height="100px" alt="logo ?ole" />
+				<img src="./logo.jpg" alt="logo ?ole" height="100px" />
 			</div>
 			<div id="sola">
-				</br>
-		      <p>Srednja lego šola za zidarje </br>
-		      </p>
-		      <p>Legoland 420, 0000 Paradise
-			    </p>
+				<p>
+				Srednja lego sola za zidarje
+                </p><p>
+				Legoland 420, 0000 Paradise
+                </p>
 			</div>
 			<div id="uporabnik">
-				</br>
+				<p>
 				user: master 
-				</br>
+				</p><p>
 				prof. Ole Kirk Christiansen 
+                </p>
 			</div>
 		</div>
 		<div id="meni">  
@@ -39,30 +55,30 @@
                 <a href="./ucitelj-redovalnica.html"><span class="linki">Redovalnica</span></a>    
 		</div>
 		<div class="vsebina">
-			<form>
-				<p><label>Letnik:&nbsp 
+			<form name="tab" action="">
+				<p><label>Letnik: 
 					<select name="letnik"> 
 						<option value="prvi">1.</option>
 						<option value="drugi">2.</option>
 						<option value="tretji">3.</option>
 					</select>
 				</label></p>
-				<p><label>Predmet:&nbsp 
+				<p><label>Predmet: 
 					<select name="predmet"> 
 						<option value="SP">Spletno programiranje</option>
 						<option value="PRPO">principi razvoja programske opreme</option>
 						<option value="OS">operacijski sistemi</option>
 					</select>
 				</label></p>
-				</br>
-				<table border="1">
+				<p></p>
+				<table border="1" id="tejbl">
 					<thead>
 						<tr class="glava">
-							<td>U?ENEC</td>
+							<td>UČENEC</td>
 							<td>PREDMET</td>
 							<td colspan="2">OCENE</td>
-							<td>POVPRE�NA OCENA</td>
-							<td>KON�NA OCENA</td>
+							<td>POVPREČNA OCENA</td>
+							<td>KONČNA OCENA</td>
 							<td>IZOSTANEK</td>
 						</tr>
 					</thead>
@@ -108,8 +124,8 @@
 						</tr>
 					</tbody>
 				</table>
-				</br>
-                <button type="button" onclick="dodajOsebo(imepriimek, predmet, ocene, povprecna, koncna, izostanek)">Dodaj učenca</button>
+				<p></p>
+                <button type="button" onclick="dodajOsebo()">Dodaj učenca</button>
 			</form>
 			</br>
 		</div>
