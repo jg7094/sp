@@ -1,0 +1,53 @@
+<?xml version = "1.0" encoding = "utf-8" ?>
+<!DOCTYPE html 
+    PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=windows-1250" />
+		<link rel="stylesheet" type="text/css" href="oblika.css" />
+		<title>ocena</title>
+	</head>
+	<body>
+		<div class="ocena">
+			<form>
+				<p>UČENEC: Jaka Govc</p>
+				<p>LETNIK: 3.</p>
+				<p>PREDMET: Spletno programiranje</p>
+				</br>
+				<p><label>Semester:&nbsp 
+					<select name="semester"> 
+						<option value="prvi">1.</option>
+						<option value="drugi">2.</option>
+					</select>
+				</label></p>
+				<p><label>Tip:&nbsp 
+					<select name="tipocene"> 
+						<option value="ustno">Ustno</option>
+						<option value="pisno">Pisno</option>
+						<option value="vaje">Vaje</option>
+					</select>
+				</label></p>
+				<p><label>Ocena:&nbsp 
+					<select name="ocena"> 
+						<option value="ena">1</option>
+						<option value="dva">2</option>
+						<option value="tri">3</option>
+						<option value="stiri">4</option>
+						<option value="pet">5</option>
+					</select>
+				</label></p>
+				</br>
+				<p><label>Komentar:</br>
+					<textarea name="komentar" rows="5" cols="42"></textarea>
+				</label></p>
+				</br>
+				<input type="submit" value="Dodaj oceno">
+				<input type=button onClick="self.close();" value="Zapri">
+				</br>
+				</br>
+			</form>
+		</div>
+	</body>
+</html>

@@ -1,0 +1,46 @@
+<?xml version = "1.0" encoding = "utf-8" ?>
+<!DOCTYPE html 
+    PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=windows-1250" />
+		<link rel="stylesheet" type="text/css" href="oblika.css" />
+		<title>login</title>
+        <script>
+			function testmail(event) {
+			var mail = event.currentTarget;
+			var pos = mail.value.search(/^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/);
+
+  			if (pos != 0)
+    		alert("npačen vnos");
+			else
+			alert("drugo");
+   				
+			}
+        </script>
+	</head>
+	<body>
+		<div class="vpis">
+			<form name="login" action="./ucitelj-redovalnica.html" method="post" accept-charset="utf-8" class="okvir">  
+    			<ul>  
+        			<li><label for="usermail">Email</label>  
+        				<input type="email" name="usermail" placeholder="ime@email.com" required>
+                        <script type="text/javascript">
+							var vnos = document.getElementById("usermail");
+							vnos.addEventListener("change",testmail,false);
+								
+						</script>
+                        </li> 
+                        </br> 
+        			<li><label for="password">Password</label>  
+        				<input type="password" name="password" placeholder="geslo" required></li>
+                        </br>   
+        			<li>  
+        			<input type="submit" value="Login" onclick="./ucitelj-redovalnica.html"></li>  
+    			</ul>  
+			</form> 
+		</div>
+	</body>
+</html>

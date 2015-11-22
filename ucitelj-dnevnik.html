@@ -1,0 +1,82 @@
+<?xml version = "1.0" encoding = "utf-8" ?>
+<!DOCTYPE html 
+    PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<link rel="stylesheet" type="text/css" href="oblika.css" />
+		<meta http-equiv="Content-Type" content="text/html; charset=windows-1250" />
+		<title>Učitelj-dnevnik</title>
+        <script src="koledar.js"></script>
+	</head>
+	<body onload="trenutniDatum();">
+		<div id="header">
+			<div id="logo">
+				<img src="./logo.jpg" alt="logo šole" height="100px" />
+			</div>
+			<div id="sola">
+				</br>
+				Srednja lego šola za zidarje
+			  </br>
+				Legoland 420, 0000 Paradise
+			</div>
+			<div id="uporabnik">
+				</br>
+				user: master 
+				</br>
+				prof. Ole Kirk Christiansen 
+			</div>
+		</div>
+		<div id="meni">  
+				<a href="./ucitelj-dnevnik.html"><span class="linki">Dnevnik</span></a>
+                <a href="./ucitelj-redovalnica.html"><span class="linki">Redovalnica</span></a>    
+		</div>
+		<div class="vsebina">
+			<form>
+				<p><label>Letnik:&nbsp 
+					<select name="letnik"> 
+						<option value="prvi">1.</option>
+						<option value="drugi" selected="selected">2.</option>
+						<option value="tretji">3.</option>
+					</select>
+				</label></p>
+				<p><label>Predmet:&nbsp 
+					<select name="predmet"> 
+						<option value="SP" selected="selected">Spletno programiranje</option>
+						<option value="PRPO">principi razvoja programske opreme</option>
+						<option value="OS">operacijski sistemi</option>
+					</select>
+				</label></p>
+				<p><label>Datum:&nbsp 
+					<input id="datum" type="date" required/>
+                    <script type="text/javascript">
+						calendar.set("datum");
+  					</script>
+                    <!--<script type="text/javascript">
+  						document.getElementById('datum').value = Date();
+					</script>-->
+				</label></p>
+				</br>
+				<p><label>Snov:
+					<input type="text" name="snov" required/>
+				</label></p>
+				<p><label>Opis:</br>
+					<textarea name="opis" rows="5" cols="42" placeholder="Opis predelane snovi..."></textarea>
+				</label></p>
+				</br>
+				<p><label>Odsotni učenci: </br>
+					</br><input type="checkbox" name="ucenec" value="ime1" checked="checked"/>Jaka Govc
+					</br><input type="checkbox" name="ucenec" value="ime2"/>J G
+					</br><input type="checkbox" name="ucenec" value="ime3"/>Janez Novak :)
+					</br><input type="checkbox" name="ucenec" value="ime4"/>Metka Novak :P
+					</br>
+				</label></p>
+				<input type = "submit" value = "Končaj uro">
+			</form>
+			</br>
+		</div>
+		
+	</body>
+
+</html>
