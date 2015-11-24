@@ -26,6 +26,13 @@
 				cell1.innerHTML = oseba;
 				cell4.innerHTML = "+ (brez linka)";
       		}
+			
+			function spremeniPredmet(){
+				var pred = document.forms["tab"]["pred"].value;
+				document.getElementById("tabPred0").innerHTML = pred;
+				document.getElementById("tabPred1").innerHTML = pred;
+			}
+			
 		</script>
 	</head>
 	<body>
@@ -62,7 +69,7 @@
 					</select>
 				</label></p>
 				<p><label>Predmet: 
-					<select name="predmet"> 
+					<select name="predmet" id="pred" onChange="spremeniPredmet()"> 
 						<option value="SP">Spletno programiranje</option>
 						<option value="PRPO">principi razvoja programske opreme</option>
 						<option value="OS">operacijski sistemi</option>
@@ -83,7 +90,7 @@
 					<tbody>
 						<tr>
 							<td><a href="./ucenec.html"><div style="plus">Jaka Govc</div></a></td>
-							<td>Spletno programiranje</td>
+							<td id="tabPred0">Spletno programiranje</td>
 							<td>6, 8</td>
 							<td>
                             <a href="#" onclick="window.open('ocena.html', 'newwindow', 'width=420, height=540'); return false;">
@@ -96,11 +103,11 @@
 						</tr>
 						<tr>
 							<td>1A učenec</td>
-							<td>Spletno programiranje</td>
+							<td id="tabPred1">Spletno programiranje</td>
 							<td>10, 10</td>
 							<td>
                             <a href="#" onclick="window.open('ocena.html', 'newwindow', 'width=420, height=540'); return false;">
-                            <div style="plus">+</div>
+                            <button type="button" onclick="dodajOceno()">+</button>
                             </a>
                             </td>
 							<td>10</td>
@@ -113,7 +120,7 @@
 							<td><label><input type="text" name="ocene"/></label></td>
 							<td>
                             <a href="#" onclick="window.open('ocena.html', 'newwindow', 'width=420, height=540'); return false;">
-                            <div style="plus">+</div>
+                            <button type="button" onclick="dodajOceno()">+</button>
                             </a>
                             </td>
 							<td><label><input type="text" name="povprecna"/></label></td>

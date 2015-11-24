@@ -3,23 +3,32 @@ body{
 	margin: 0;
 	padding: 0;
 	font-family: Verdana, Arial;
-	background-color: #C0C0C0;
+	background-color: #E0E0E0;
 	width:100%;
 }
 
-@media all and (max-width: 1000px){
+@media all and (max-width: 900px){
 	body, .mali{
-		font-size:85%;	
+		font-size:80%;	
 	}
 	
 }
+
 @media all and (max-width: 700px){
-	body, .mali{
+	body{
 		font-size:60%;	
 	}
 }
+
+@media all and (max-width: 500px){
+	body{
+		font-size:45%;	
+	}
+}
+
 h1{
-	font-size:300%;
+	font-size:350%;
+	font-family:"Book Antiqua";
 }
 img{
 	height: 100px;
@@ -110,7 +119,6 @@ a:active {
 
 .ocena{
 	width: 95%;
-	background-color: lightgreen;
 	padding-left: 5%;
 	padding-top: 5%;
 }
@@ -118,7 +126,7 @@ a:active {
 	float: left;
 	padding-left: 5%;
 	padding-top: 5%;
-	background-color: #C0C0C0;
+	/*background-color: #C0C0C0;*/
 	width: 95%;
 }
 .linki{
@@ -151,13 +159,13 @@ a:active {
 	float: left;
 	padding-left: 2%;
 	font-size: 12px;
-	height: 100px;
+	/*height: 100px;*/
 }
 #uporabnik{
 	float: right;
 	font-size: 12px;
 	padding-right: 5%;
-	height: 100px;
+	/*height: 100px;*/
 }
 
 #meni{
